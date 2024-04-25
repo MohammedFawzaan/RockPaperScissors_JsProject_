@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./assets/Logo.jpeg">
+</head>
+
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <div class="Total">
+        <div class="Main">
+            <div class="Elements">
+                <img src="./assets/Rock.webp" alt="">
+                <button id="b1">Rock</button>
+            </div>
+            <div class="Elements">
+                <img src="./assets/paper.webp" alt="">
+                <button id="b2">Paper</button>
+            </div>
+            <div class="Elements">
+                <img src="./assets/scissors.jpg" alt="">
+                <button id="b3">Scissors</button>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <table>
+                <tr>
+                    <th>You</th>
+                    <th>Computer</th>
+                </tr>
+                <tr>
+                    <td id="yourpoints">0</td>
+                    <td id="comppoints">0</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="Footer">
+            <div class="userentry">
+                <h2><pre>Your Entry :   </pre></h2>
+                <h2 id="yourcall"><pre> Nothing</pre></h2>
+            </div>
+            <div class="computerentry">
+                <h2><pre>Computer Entry :   </pre></h2>
+                <h2 id="compcall"><pre> Nothing</pre></h2>
+            </div>
+            <div id="win">
+                <h3></h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
