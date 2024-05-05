@@ -3,7 +3,7 @@ let yp = 0, cp = 0;
 
 b1.addEventListener('click', function () {
     let computer = "";
-    let random = Math.floor(Math.random()*3);
+    let random = Math.floor(Math.random() * 3);
     if (random == 0) {
         computer = "Rock";
     } else if (random == 1) {
@@ -11,16 +11,16 @@ b1.addEventListener('click', function () {
     } else if (random == 2) {
         computer = "Scissors";
     }
-    
+
     yourcall.innerHTML = "Rock";
     compcall.innerHTML = computer;
-    
-    if(computer=="Rock" ) {
+
+    if (computer == "Rock") {
         console.log('Draw');
-    } else if(computer=="Paper") {
+    } else if (computer == "Paper") {
         cp++;
         comppoints.innerHTML = cp;
-    } else if (computer=="Scissors")  {
+    } else if (computer == "Scissors") {
         yp++;
         yourpoints.innerHTML = yp;
     } else {
@@ -30,9 +30,9 @@ b1.addEventListener('click', function () {
 
 let b2 = document.querySelector('#b2');
 
-b2.addEventListener('click', function() {
+b2.addEventListener('click', function () {
     let computer = "";
-    let random = Math.floor(Math.random()*3);
+    let random = Math.floor(Math.random() * 3);
     if (random == 0) {
         computer = "Rock";
     } else if (random == 1) {
@@ -40,16 +40,16 @@ b2.addEventListener('click', function() {
     } else if (random == 2) {
         computer = "Scissors";
     }
-    
+
     yourcall.innerHTML = "Paper";
     compcall.innerHTML = computer;
 
-    if(computer=="Paper") {
+    if (computer == "Paper") {
         console.log('Draw');
-    } else if(computer=="Scissors") {
+    } else if (computer == "Scissors") {
         cp++;
         comppoints.innerHTML = cp;
-    } else if (computer=="Rock")  {
+    } else if (computer == "Rock") {
         yp++;
         yourpoints.innerHTML = yp;
     } else {
@@ -59,9 +59,9 @@ b2.addEventListener('click', function() {
 
 let b3 = document.querySelector('#b3');
 
-b3.addEventListener('click', function() {
+b3.addEventListener('click', function () {
     let computer = "";
-    let random = Math.floor(Math.random()*3);
+    let random = Math.floor(Math.random() * 3);
     if (random == 0) {
         computer = "Rock";
     } else if (random == 1) {
@@ -69,16 +69,16 @@ b3.addEventListener('click', function() {
     } else if (random == 2) {
         computer = "Scissors";
     }
-    
+
     yourcall.innerHTML = "Scissors";
     compcall.innerHTML = computer;
 
-    if(computer=="Scissors") {
+    if (computer == "Scissors") {
         console.log('Draw');
-    } else if(computer=="Rock") {
+    } else if (computer == "Rock") {
         cp++;
         comppoints.innerHTML = cp;
-    } else if (computer=="Paper")  {
+    } else if (computer == "Paper") {
         yp++;
         yourpoints.innerHTML = yp;
     } else {
@@ -92,14 +92,13 @@ let compcall = document.querySelector('#compcall');
 let yourpoints = document.querySelector('#yourpoints');
 let comppoints = document.querySelector('#comppoints');
 
-let h3 = document.querySelector("#win h3");
+let winner = document.querySelector("#win");
 
-h3.addEventListener('click', function() {
-    if(yp == 3) {
-        h3.innerHTML = "You won";
-    } else if(cp == 3) {
-        h3.innerHTML = "Computer won";
-    } else {
-        h3.innerHTML = "Play";
-    }
-});
+if (yourpoints.innerHTML == "3") {
+    winner.innerHTML = "You won";
+}
+else if (comppoints.innerHTML == "3") {
+    winner.innerHTML = "Computer won";
+} else {
+    winner.innerHTML = "Play";
+}
